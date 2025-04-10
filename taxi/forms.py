@@ -8,7 +8,7 @@ from taxi.models import Driver
 
 class DriverCreationForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
-        model = User
+        model = Driver
         fields = UserCreationForm.Meta.fields + ("first_name", "last_name",)
 
 
