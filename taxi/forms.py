@@ -28,10 +28,10 @@ class DriverLicenseUpdateForm(forms.ModelForm):
 
 
 class CarForm(forms.ModelForm):
-    driver = forms.ModelMultipleChoiceField(
+    drivers = forms.ModelMultipleChoiceField(
         queryset=get_user_model().objects.all(),
         widget=forms.CheckboxSelectMultiple,
-        required=False
+        required=False,
     )
 
     class Meta:
